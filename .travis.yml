@@ -2,8 +2,6 @@ language: node_js
 node_js:
   - "0.11"
   - "0.10"
-  - "0.8"
-  - "0.6"
 env:
   - secure: "m8rWyAomRFX22pK5QuJli9445FOa2sk2CaGyolOhj0r0v8qxHNYM9Zi2Qrazejd9k1W5QnBkLpD2hnyp+WXCTqI1x4ereOeMpObYVACpy+xdAC8fQsyR1QXjDAVZSJK4VZWukGWNLGagMUFOSEOUKQwMcfWJPnBUmx4dWQgftt8="
 before_script: npm install -g istanbul codeclimate-test-reporter
