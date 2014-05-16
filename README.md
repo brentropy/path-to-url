@@ -1,7 +1,13 @@
 # Path-to-URL
 
+[![npm](http://img.shields.io/npm/v/path-to-url.svg?style=flat)](https://www.npmjs.org/package/path-to-url)
+[![Travis](http://img.shields.io/travis/brentburgoyne/path-to-url.svg?style=flat)](https://travis-ci.org/brentburgoyne/path-to-url)
+[![Code Climate](http://img.shields.io/codeclimate/github/brentburgoyne/path-to-url.svg?style=flat)](https://codeclimate.com/github/brentburgoyne/path-to-url)
+[![Code Climate Coverage](http://img.shields.io/codeclimate/coverage/github/brentburgoyne/path-to-url.svg?style=flat)](https://codeclimate.com/github/brentburgoyne/path-to-url)
+[![Gemnasium](http://img.shields.io/gemnasium/brentburgoyne/path-to-url.svg?style=flat)](https://gemnasium.com/brentburgoyne/path-to-url)
+
 Turns an [Express-style path][1] string such as `/user/:name` into a URL like
-`/user/brentburgoyne`.
+`/user/brentburgoyne` to support reverse routing.
 
 ## Installation
 
@@ -20,6 +26,8 @@ var pathToUrl = require('path-to-url');
 - **path** A string in the express path format.
 - **params** An object where the keys match named params in the path to be
 replaced with the value.
+    - **params.param** The value that will replace `:param` in the
+    URL.
     - **params.$** Special key where the value replaces the `*` wildcard in
     greedy paths.
 
