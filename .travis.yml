@@ -1,9 +1,15 @@
 language: node_js
 node_js:
-  - "0.11"
-  - "0.10"
+- '0.11'
+- '0.10'
 env:
-  - secure: "m8rWyAomRFX22pK5QuJli9445FOa2sk2CaGyolOhj0r0v8qxHNYM9Zi2Qrazejd9k1W5QnBkLpD2hnyp+WXCTqI1x4ereOeMpObYVACpy+xdAC8fQsyR1QXjDAVZSJK4VZWukGWNLGagMUFOSEOUKQwMcfWJPnBUmx4dWQgftt8="
+- secure: m8rWyAomRFX22pK5QuJli9445FOa2sk2CaGyolOhj0r0v8qxHNYM9Zi2Qrazejd9k1W5QnBkLpD2hnyp+WXCTqI1x4ereOeMpObYVACpy+xdAC8fQsyR1QXjDAVZSJK4VZWukGWNLGagMUFOSEOUKQwMcfWJPnBUmx4dWQgftt8=
 before_script: npm install -g istanbul codeclimate-test-reporter
 script: istanbul cover node_modules/.bin/_mocha -- -u exports -R spec
 after_success: codeclimate < coverage/lcov.info
+deploy:
+  provider: npm
+  api_key:
+    secure: ZQJgJLecuXTGQEact0O9qWbevYb3Acsw6MHzQbVh0A8POqMHtk7NWzcAhvjgD+4ssJDWgtvOmJ6z6pOd50BXkGXZIew5KRzeQ+BslEnt0T8fSk1Xht3okdZKiZV7/iJaK7S/L1Bx3oEkursV5oO6gWLvH5iZqN0jruc7Smm/e+A=
+  on:
+    tags: true
