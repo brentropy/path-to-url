@@ -1,6 +1,6 @@
 {
   "name": "path-to-url",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Turn an Express-style path string such as /user/:name into a URL",
   "main": "lib/path-to-url.js",
   "directories": {
